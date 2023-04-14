@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - include:
+      file: classpath:db/changelog/create/create.users.table.yaml
+  - include:
+      file: classpath:db/changelog/create/create.location.table.yaml
+  - include:
+      file: classpath:db/changelog/create/create.services.table.yaml
+  - include:
+      file: classpath:db/changelog/create/create.bookings.table.yaml
+  - include:
+      file: classpath:db/changelog/create/create.availability.table.yaml
+  - include:
+      file: classpath:db/changelog/create/create.reviews.table.yaml

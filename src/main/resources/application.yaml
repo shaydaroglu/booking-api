@@ -1,0 +1,41 @@
+# Sentry
+#sentry.dsn=${SENTRY_DSN}
+#sentry.environment=${ENV_NAME}
+#sentry.exception-resolver-order=-1
+#sentry.tags.node=${NODE_NAME}
+#sentry.tags.app_env=${APP_ENV}
+
+springdoc:
+  swagger-ui:
+    path: /
+
+spring:
+  jackson:
+    property-naming-strategy: SNAKE_CASE
+  datasource:
+    url: jdbc:mysql://${DB_HOST}:${DB_PORT}/${DB_NAME}?useSSL=false&serverTimezone=UTC
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    hikari:
+      maximum-pool-size: ${DATABASE_POOL_SIZE:2}
+  liquibase:
+    enabled: false
+  jpa:
+    properties:
+      javax.persistance.validation.mode: none
+      org:
+        hibernate:
+          format_sql: true
+          envers:
+            store_data_at_delete: true
+            audit_table_suffix:
+            audit_table_prefix: audit_
+
+logbook:
+  format:
+    style: splunk
+  exclude:
+    - "/healthcheck"
+    - "**/swagger-ui/**"
+    - "/v3/api-docs/**"
