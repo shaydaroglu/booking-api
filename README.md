@@ -60,11 +60,12 @@ Clone this repository:
 git clone git@github.com:shaydaroglu/booking-api.git
 ```
 
-Run
-```bash
-docker-compose up -d mysql
+Then migrate the database with setting active profile as migration as following:
 ```
-After this is done, run the service using your IDE, you should be able to load (**http://127.0.0.1:8080/healthcheck**) and be greeted with:
+--spring.profiles.active=migration
+```
+
+After this is done (or if not needed), run the service using your IDE, you should be able to load (**http://127.0.0.1:8080/healthcheck**) and be greeted with:
 ```text
 {
 	"booking-api": "is_alive"
