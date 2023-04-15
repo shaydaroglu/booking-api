@@ -27,10 +27,6 @@ spring:
       org:
         hibernate:
           format_sql: true
-          envers:
-            store_data_at_delete: true
-            audit_table_suffix:
-            audit_table_prefix: audit_
 
 logbook:
   format:
