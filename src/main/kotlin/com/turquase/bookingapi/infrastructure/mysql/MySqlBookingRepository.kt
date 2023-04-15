@@ -18,7 +18,7 @@ class MySqlBookingRepository(
     }
 
     override fun findOneById(id: Long): BookingEntity? {
-        val sqlQuery = "SELECT DISTINCT FROM bookings WHERE id = :id"
+        val sqlQuery = "SELECT booking FROM BookingEntity as booking WHERE booking.id = :id"
 
         return try {
             manager.createQuery(sqlQuery, BookingEntity::class.java)

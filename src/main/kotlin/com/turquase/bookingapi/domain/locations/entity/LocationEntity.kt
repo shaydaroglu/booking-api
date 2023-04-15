@@ -1,4 +1,4 @@
-package com.turquase.bookingapi.domain.locations.country.entity
+package com.turquase.bookingapi.domain.locations.entity
 
 import com.turquase.bookingapi.domain.common.WithTimeStamp
 import javax.persistence.*

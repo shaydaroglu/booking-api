@@ -20,7 +20,7 @@ spring:
     hikari:
       maximum-pool-size: ${DATABASE_POOL_SIZE:2}
   liquibase:
-    enabled: false
+    enabled: true
   jpa:
     properties:
       javax.persistance.validation.mode: none

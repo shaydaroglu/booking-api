@@ -1,6 +1,5 @@
 package com.turquase.bookingapi.domain.availability.entity
 
-
 import com.turquase.bookingapi.domain.common.WithTimeStamp
 import org.joda.time.LocalDate
 import org.joda.time.LocalDateTime
@@ -27,4 +26,4 @@ class AvailabilityEntity(
 
     @Column(name = "end_time")
     var endTime: LocalDateTime,
-    ) : WithTimeStamp()
+) : WithTimeStamp()

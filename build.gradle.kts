@@ -17,8 +17,12 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.data:spring-data-envers")
+    implementation("org.springframework.security:spring-security-crypto:6.0.2")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
@@ -28,11 +32,7 @@ dependencies {
     implementation("org.apache.httpcomponents:httpclient:4.5.14")
     implementation("com.cloudogu.cb:command-bus-spring:2.0.0")
     implementation("org.zalando:logbook-spring-boot-starter:2.16.0")
-    implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.liquibase:liquibase-core:4.20.0")
-    implementation("org.springframework.data:spring-data-envers")
-    implementation("org.springframework.security:spring-security-crypto:6.0.2")
     implementation("org.yaml:snakeyaml:1.33")
 
     runtimeOnly("mysql:mysql-connector-java")

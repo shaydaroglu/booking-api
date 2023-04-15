@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      author: sercan haydaroglu
+      id: update.add_status_and_price_to_booking.yaml
+      changes:
+        - addColumn:
+            tableName: bookings
+            columns:
+              - column:
+                  name: status
+                  type: VARCHAR(50)
+                  constraints:
+                    nullable: false

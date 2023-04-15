@@ -17,9 +17,12 @@ data class GetBookingResponse(@JsonIgnore private val booking: BookingEntity) {
     @Schema(name = "end_date", description = "Booking end time", format = "date", example = "2023-14-04")
     val endDate = booking.endTime.toString("yyyy-MM-dd")
 
-    @Schema(description = "Booking location")
+    @Schema(description = "Booked location")
     val location = GetLocationResponse(booking.location)
 
-    @Schema(description = "Booking service")
+    @Schema(description = "Booked service")
     val service = GetServiceResponse(booking.service)
+
+    @Schema(description = "Booking status")
+    val status = booking.status
 }
