@@ -1,0 +1,3 @@
+databaseChangeLog:
+  - include:
+      file: classpath:db/changelog/delete/delete.delete_date_column_from_booking.yaml

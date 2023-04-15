@@ -3,3 +3,5 @@ databaseChangeLog:
       file: classpath:db/changelog/create/create.changelog.yaml
   - include:
       file: classpath:db/changelog/update/update.changelog.yaml
+  - include:
+      file: classpath:db/changelog/delete/delete.changelog.yaml

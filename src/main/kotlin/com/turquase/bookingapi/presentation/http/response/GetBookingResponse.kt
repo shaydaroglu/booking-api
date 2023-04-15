@@ -11,11 +11,11 @@ data class GetBookingResponse(@JsonIgnore private val booking: BookingEntity) {
     @Schema(name = "user_id", description = "Booking user id", example = "123")
     val userId = booking.user.id
 
-    @Schema(name = "start_date", description = "Booking start time", format = "date", example = "2023-14-04")
-    val startDate = booking.startTime.toString("yyyy-MM-dd")
+    @Schema(name = "start_time", description = "Booking start time", format = "date", example = "2023-14-04")
+    val startTime = booking.startTime.toString("yyyy-MM-dd")
 
-    @Schema(name = "end_date", description = "Booking end time", format = "date", example = "2023-14-04")
-    val endDate = booking.endTime.toString("yyyy-MM-dd")
+    @Schema(name = "end_time", description = "Booking end time", format = "date", example = "2023-14-04")
+    val endTime = booking.endTime.toString("yyyy-MM-dd")
 
     @Schema(description = "Booked location")
     val location = GetLocationResponse(booking.location)

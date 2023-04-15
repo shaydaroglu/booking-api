@@ -4,6 +4,7 @@ import com.turquase.bookingapi.domain.common.WithTimeStamp
 import com.turquase.bookingapi.domain.locations.entity.LocationEntity
 import com.turquase.bookingapi.domain.services.entity.ServiceEntity
 import com.turquase.bookingapi.domain.users.entity.UserEntity
+import org.joda.time.DateTime
 import org.joda.time.LocalDateTime
 import javax.persistence.*
 
@@ -27,10 +28,10 @@ class BookingEntity(
     var location: LocationEntity,
 
     @Column(name = "start_time")
-    var startTime: LocalDateTime,
+    var startTime: DateTime,
 
     @Column(name = "end_time")
-    var endTime: LocalDateTime,
+    var endTime: DateTime,
 
     @Column(name = "status")
     var status: String,

@@ -1,3 +1,5 @@
 databaseChangeLog:
   - include:
       file: classpath:db/changelog/update/update.add_status_and_price_to_booking.yaml
+  - include:
+      file: classpath:db/changelog/update/update.update_data_type_for_time.yaml

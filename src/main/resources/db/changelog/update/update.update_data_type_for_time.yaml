@@ -1,0 +1,13 @@
+databaseChangeLog:
+  - changeSet:
+      author: sercan haydaroglu
+      id: update.update_data_type_for_time.yaml
+      changes:
+        - modifyDataType:
+            tableName: bookings
+            columnName: start_time
+            newDataType: DATETIME
+        - modifyDataType:
+            tableName: bookings
+            columnName: end_time
+            newDataType: DATETIME

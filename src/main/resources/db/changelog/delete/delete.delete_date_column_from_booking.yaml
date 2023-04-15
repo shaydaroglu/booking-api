@@ -1,0 +1,8 @@
+databaseChangeLog:
+  - changeSet:
+      author: sercan haydaroglu
+      id: delete.delete_date_column_from_booking.yaml
+      changes:
+        - dropColumn:
+            tableName: bookings
+            columnName: date
