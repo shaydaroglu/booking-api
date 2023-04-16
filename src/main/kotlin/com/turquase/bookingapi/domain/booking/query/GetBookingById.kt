@@ -11,8 +11,8 @@ class GetBookingById(
     @field: NotEmpty(message = "booking ID must not be blank")
     @field: Parameter(
         `in` = ParameterIn.PATH,
-        description = "Id of the booking get",
-        schema = Schema(type = "long")
+        description = "Id of the booking",
+        schema = Schema(type = "string")
     )
     private val id: String
 ) : Query<BookingEntity> {

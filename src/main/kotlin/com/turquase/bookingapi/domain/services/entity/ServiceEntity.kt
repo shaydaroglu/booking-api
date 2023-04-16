@@ -19,7 +19,4 @@ class ServiceEntity(
 
     @Column(name = "price")
     var price: BigDecimal,
-
-    @Column(name = "duration")
-    var duration: Int
 ) : WithTimeStamp()
