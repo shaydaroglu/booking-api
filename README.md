@@ -32,8 +32,6 @@ The base folder structure was based on Hexagonal Architecure:
 ![image](https://user-images.githubusercontent.com/15172908/202044518-36d720d3-fadc-41d4-8696-e9787a685f75.png)
 
 
-_Note: It is recommended to rename the main package name inside the `src/main/kotlin` folder, to match the name of your project/domain._
-
 ## Getting started
 ### Prerequisites
 
