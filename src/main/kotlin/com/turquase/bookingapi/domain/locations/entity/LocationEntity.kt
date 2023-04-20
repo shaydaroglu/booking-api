@@ -22,6 +22,9 @@ class LocationEntity(
     @Column(name = "country")
     var country: String,
 
+    @Column(name = "state")
+    var state: String,
+
     @Column(name = "latitude")
     var latitude: Double,
 
