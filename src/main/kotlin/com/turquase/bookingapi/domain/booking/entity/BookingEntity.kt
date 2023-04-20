@@ -5,8 +5,6 @@ import com.turquase.bookingapi.domain.locations.entity.LocationEntity
 import com.turquase.bookingapi.domain.services.entity.ServiceEntity
 import com.turquase.bookingapi.domain.users.entity.UserEntity
 import java.time.LocalDateTime
-
-
 import javax.persistence.*
 
 @Entity

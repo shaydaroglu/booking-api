@@ -7,7 +7,7 @@ import javax.persistence.NoResultException
 
 @Component
 class MySqlBookingRepository(
-    private val jpa: JpaBookingRepository
+    private val jpa: JpaBookingsRepository
 ) : AbstractMySqlRepository(), BookingRepository {
     override fun save(booking: BookingEntity) {
         jpa.save(booking)
@@ -18,7 +18,10 @@ class MySqlBookingRepository(
     }
 
     override fun findOneById(id: Long): BookingEntity? {
-        val sqlQuery = "SELECT booking FROM BookingEntity as booking WHERE booking.id = :id"
+        val sqlQuery = """
+            |SELECT booking 
+            |FROM BookingEntity as booking 
+            |WHERE booking.id = :id""".trimMargin()
 
         return try {
             manager.createQuery(sqlQuery, BookingEntity::class.java)

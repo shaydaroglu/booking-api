@@ -25,9 +25,7 @@ class GetBookingByIdController(private val handler: CommandBus) {
         @PathVariable("id")
         query: GetBookingById
     ): GetBookingResponse {
-        val booking = handler.execute(
-            query
-        )
+        val booking = handler.execute(query)
 
         return GetBookingResponse(booking)
     }
